@@ -1,0 +1,23 @@
+.container {
+  width: fit-content;
+  margin: 30px auto;
+  text-align: center;
+  background: #f4f6fb;
+  border: 1px solid white;
+  box-shadow: 10px 10px 64px 0px rgba(180, 180, 207, 0.75);
+  -webkit-box-shadow: 10px 10px 64px 0px rgba(186, 186, 202, 0.75);
+  -moz-box-shadow: 10px 10px 64px 0px rgba(208, 208, 231, 0.75);
+}
+
+.title {
+  padding-bottom: 20px;
+  font-size: 44px;
+  color: #7878bd;
+  
+}
+.contacts__title{
+    font-size: 32px;
+  color: #7878bd;
+  margin-top:  0;
+  margin-bottom: 10px;
+}
