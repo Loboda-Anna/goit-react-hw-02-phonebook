@@ -3,10 +3,15 @@ import { Form } from './Form/Form';
 import { ContactsList } from './ContactsList/ContactsList';
 import { Filter } from './Filter/Filter';
 import css from './App.module.css';
-
 import { nanoid } from 'nanoid';
 
 export class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state.contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+  }
+
   state = {
     contacts: [],
     filter: '',
@@ -36,6 +41,10 @@ export class App extends Component {
       contacts: prevState.contacts.filter(contact => contact.id !== contactId),
     }));
   };
+
+  componentDidUpdate() {
+    localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+  }
 
   render() {
     const normalizedFilter = this.state.filter.trim().toLowerCase();
